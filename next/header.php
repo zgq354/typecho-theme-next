@@ -8,11 +8,13 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5'); ?>"/>
-    <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/main.css?v=0.4.5.1'); ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0'); ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/main.css?v=0.4.5.2'); ?>"/>
     <script type="text/javascript" id="hexo.configuration">
     var CONFIG = {
         scheme: 'Mist',
-        sidebar: 'post'
+        sidebar: 'post',
+        motion: true
     };
     </script>
     <title><?php $this->archiveTitle(array(

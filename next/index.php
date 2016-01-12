@@ -4,8 +4,8 @@
  * 
  * @package Next.Mist
  * @author zgq354
- * @version 1.0
- * @link http://izgq.net/
+ * @version 1.1
+ * @link http://blog.izgq.net/archives/444/
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
