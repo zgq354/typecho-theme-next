@@ -2,12 +2,12 @@
 <footer id="footer" class="footer">
       <div class="footer-inner"> 
 <div class="copyright" >
-  &copy; &nbsp; 
+  &copy;
   <span itemprop="copyrightYear"><?php echo date('Y'); ?></span>
   <span class="with-love">
-    <i class="icon-next-heart"></i>
+    <i class="icon-next-heart fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder"><?php $this->options->title(); ?></span>
+  <span class="author" itemprop="copyrightHolder"><a href="<?php $this->options->siteUrl(); ?>"><?php if($this->options->next_name) $this->options->next_name(); else $this->options->title(); ?></a></span>
 </div>
 
 <div class="powered-by">

@@ -1,4 +1,10 @@
-<!doctype html>
+<?php
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+//当cdn加速开启时候定义cdn的地址
+if (!empty($this->options->next_cdn) && $this->options->next_cdn){
+    define('__TYPECHO_THEME_URL__', Typecho_Common::url(__TYPECHO_THEME_DIR__ . '/next', $this->options->next_cdn));
+}
+?><!doctype html>
 <html class="theme-next use-motion theme-next-mist">
 <head>
     <meta charset="<?php $this->options->charset(); ?>">
@@ -13,8 +19,22 @@
     <script type="text/javascript" id="hexo.configuration">
     var CONFIG = {
         scheme: 'Mist',
-        sidebar: 'post',
-        motion: true
+        motion: true,
+        sidebar: <?php switch ($this->options->sidebar) {
+          //始终弹出
+          case '0':
+            echo "'always'";
+            break;
+          //有目录时弹出
+          case '1':
+            echo "'post'";
+            break;
+          //不弹出
+          default:
+            echo "false";
+            break;
+        }?>
+
     };
     </script>
     <title><?php $this->archiveTitle(array(

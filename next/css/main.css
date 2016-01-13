@@ -2499,12 +2499,6 @@ textarea.textarea {
 #response {
     margin-bottom:1em;
 }
-#footer {
-    padding:.8em 0 3.6em;
-    line-height:1.5;
-    color:#999;
-    text-align: center;
-}
 .error-page {
     margin-top:100px;
     margin-bottom:100px;
