@@ -1280,7 +1280,7 @@ body {
   color: #999;
 }
 @media (max-width: 767px) {
-  .posts-expand .post-comments-count {
+  .posts-expand {
     display: none;
   }
 }
