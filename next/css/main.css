@@ -2312,14 +2312,14 @@ mobie()
 }
 .comment-author {
     display:block;
-    margin-bottom:3px;
+    margin-bottom:1px;
     color:#444;
 }
 .comment-author .avatar {
-    float:left;
-    margin:1px 10px 0 0;
+    float: left;
+    margin: 7px 7px 0 0;
     border: 1px solid #ddd;
-width: 32px;
+    width: 32px;
     padding: 1px;
 }
 .comment-author cite {
@@ -2356,7 +2356,7 @@ margin-left: 22px;
     display:block;
     color:#888;
     position:absolute;
-    margin:7px;
+    margin:4px 8px;
 }
 #comment-form input {
     padding: 8px 6px;
