@@ -13,6 +13,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn){
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" type="text/css" href="//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext"/>
     <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5'); ?>"/>
     <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0'); ?>"/>
     <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/main.css?v=0.4.5.2'); ?>"/>

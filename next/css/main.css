@@ -1279,11 +1279,6 @@ body {
 .posts-expand .post-meta .post-category-list-link {
   color: #999;
 }
-@media (max-width: 767px) {
-  .posts-expand {
-    display: none;
-  }
-}
 @media (min-width: 992px) {
   .posts-expand .post-body {
     text-align: justify;
@@ -2069,6 +2064,8 @@ ul li {
 @media (max-width: 767px) {
   .menu .menu-item a {
     text-align: left;
+    margin-top: 5px;
+    padding: 8px 10px;
   }
 }
 .menu .menu-item a:hover {
