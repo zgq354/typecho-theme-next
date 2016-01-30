@@ -18,7 +18,7 @@ A typecho version of hexo theme next https://github.com/iissnan/hexo-theme-next
 1. 点击 download zip 下载最新源码，解压，将其中的next目录上传至博客的 /usr/themes 目录下
 2. 在博客后台点击启用
 3. 新建分类页，缩略名为 categories ，自定义模板选择 categories 
-4. 新建归档页，缩略名为 archive ，自定义模板选择 archives 
+4. 新建归档页，缩略名为 archive ，自定义模板选择 archive
 5. 前往外观设置设置头像，昵称等等
 
 # License
