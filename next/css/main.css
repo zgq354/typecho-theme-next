@@ -1568,6 +1568,22 @@ body {
   display: inline-block;
   margin: 10px;
 }
+.tag-size-1 {
+    font-size: 12px;
+    color: #ccc
+}
+.tag-size-5 {
+    font-size: 18px;
+    color: #ccc
+}
+.tag-size-10 {
+    font-size: 22px;
+    color: #646464
+}
+.tag-size-15 {
+    font-size: 28px;
+    color: #262626
+}
 .post-gallery {
   display: table;
   table-layout: fixed;

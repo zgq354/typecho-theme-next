@@ -16,7 +16,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn){
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext"/>
     <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5'); ?>"/>
     <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0'); ?>"/>
-    <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/main.css?v=0.4.5.2'); ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/main.css?v=1.2.1'); ?>"/>
     <script type="text/javascript" id="hexo.configuration">
     var CONFIG = {
         scheme: 'Mist',

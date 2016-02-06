@@ -48,6 +48,17 @@ function getGravatar($email, $s = 40, $d = 'mm', $g = 'g') {
 
 }
 
+function getTagCount()
+{
+    $tags = Typecho_Widget::widget('Widget_Metas_Tag_Cloud');
+    // 获取标签数目
+    $count = 0;
+    while ($tags->next()):
+        $count++;
+    endwhile;
+    return $count;
+}
+
 /*
 function themeFields($layout) {
     $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点LOGO地址'), _t('在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO'));

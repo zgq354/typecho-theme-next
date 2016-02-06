@@ -33,9 +33,11 @@ Typecho_Widget::widget('Widget_Stat')->to($stat);
       </div>
 
       <div class="site-state-item site-state-tags">
-          <span class="site-state-item-count"><?php echo $stat->publishedPagesNum;?></span>
-          <span class="site-state-item-name">页面</span>
-  </div>
+          <a href="<?php echo Typecho_Router::url('page', array('slug' => 'tags'), $this->options->index); ?>">
+              <span class="site-state-item-count"><?php echo getTagCount(); ?></span>
+              <span class="site-state-item-name">标签</span>
+          </a>
+      </div>
 </nav>
 <?php if(!empty($this->options->search_form) && in_array('ShowFeed', $this->options->search_form)): ?>
           <div class="feed-link motion-element">
