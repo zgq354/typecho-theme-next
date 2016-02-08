@@ -30,10 +30,11 @@ function themeConfig($form) {
     $form->addInput($sidebar);
 
     $search_form = new Typecho_Widget_Helper_Form_Element_Checkbox('search_form', 
-    array('ShowSearch' => _t('显示搜索框'),
+    array('Motion' => _t('启用动画效果'),
+        'ShowSearch' => _t('显示搜索框'),
         'ShowFeed' => _t('显示RSS订阅'),
         ),
-    array('ShowSearch','ShowFeed'), _t('其他设置'));
+    array('ShowSearch','ShowFeed','Motion'), _t('其他设置'));
     
     $form->addInput($search_form->multiMode());
 }

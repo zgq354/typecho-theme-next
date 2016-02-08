@@ -5,7 +5,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn){
     define('__TYPECHO_THEME_URL__', Typecho_Common::url(__TYPECHO_THEME_DIR__ . '/next', $this->options->next_cdn));
 }
 ?><!doctype html>
-<html class="theme-next use-motion theme-next-mist">
+<html class="theme-next <?php if(!empty($this->options->search_form) && in_array('Motion', $this->options->search_form)) echo "use-motion ";?>theme-next-mist">
 <head>
     <meta charset="<?php $this->options->charset(); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -20,7 +20,11 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn){
     <script type="text/javascript" id="hexo.configuration">
     var CONFIG = {
         scheme: 'Mist',
-        motion: true,
+        motion: <?php if(!empty($this->options->search_form) && in_array('Motion', $this->options->search_form))
+            echo "true";
+          else
+            echo "false";
+          ?>,
         sidebar: <?php switch ($this->options->sidebar) {
           //始终弹出
           case '0':
