@@ -10,14 +10,14 @@ function themeConfig($form) {
     $form->addInput($next_name);
 
 
-    $next_gravatar = new Typecho_Widget_Helper_Form_Element_Text('next_gravatar', NULL, '', _t('侧边栏头像'), _t('填写Gravatar头像的邮箱地址'));
+    $next_gravatar = new Typecho_Widget_Helper_Form_Element_Text('next_gravatar', NULL, '', _t('侧边栏头像'), _t('填写 Gravatar 头像的邮箱地址'));
     $next_gravatar->input->setAttribute('class', 'w-100 mono');
     $form->addInput($next_gravatar->addRule('email', '请填写一个邮箱地址'));
 
     $next_tips = new Typecho_Widget_Helper_Form_Element_Text('next_tips', NULL, '一个高端大气上档次的网站', _t('站点描述'), _t('将显示在侧边栏的昵称下方'));
     $form->addInput($next_tips);
 
-    $next_cdn = new Typecho_Widget_Helper_Form_Element_Text('next_cdn', NULL, $siteUrl, _t('cdn镜像地址'), _t('静态文件cdn镜像加速地址，加速js和css，如七牛，又拍云等<br>格式参考：'.$siteUrl.'<br>不用请留空或者保持默认'));
+    $next_cdn = new Typecho_Widget_Helper_Form_Element_Text('next_cdn', NULL, $siteUrl, _t('CDN 镜像地址'), _t('静态文件 CDN 镜像加速地址，加速js和css，如七牛，又拍云等<br>格式参考：'.$siteUrl.'<br>不用请留空或者保持默认'));
     $form->addInput($next_cdn);
 
     $sidebar = new Typecho_Widget_Helper_Form_Element_Radio('sidebar', 
@@ -32,7 +32,7 @@ function themeConfig($form) {
     $search_form = new Typecho_Widget_Helper_Form_Element_Checkbox('search_form', 
     array('Motion' => _t('启用动画效果'),
         'ShowSearch' => _t('显示搜索框'),
-        'ShowFeed' => _t('显示RSS订阅'),
+        'ShowFeed' => _t('显示 RSS 订阅'),
         ),
     array('ShowSearch','ShowFeed','Motion'), _t('其他设置'));
     
