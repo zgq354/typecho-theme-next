@@ -39,7 +39,24 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
        </span>
        <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a rel="nofollow" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('暂无评论', '1 条评论', '%d 条评论'); ?></a>
+                <?php if($this->options->next_comments): ?>
+               	<a rel="nofollow" href="<?php $this->permalink() ?>#comments"><span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>" data-count-type="comments"></span></a>
+                <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        				<script type="text/javascript">
+        				var duoshuoQuery = {short_name:"cizel1"};
+        					(function() {
+        						var ds = document.createElement('script');
+        						ds.type = 'text/javascript';ds.async = true;
+        						ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        						ds.charset = 'UTF-8';
+        						(document.getElementsByTagName('head')[0] 
+        						 || document.getElementsByTagName('body')[0]).appendChild(ds);
+        					})();
+        					</script>
+        				<!-- 多说公共JS代码 end -->
+              <?php else: ?>
+              <a rel="nofollow" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('暂无评论', '1 条评论', '%d 条评论'); ?></a>
+              <?php endif; ?>
        </span>
       </div>
     </header>

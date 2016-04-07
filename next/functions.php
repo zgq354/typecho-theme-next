@@ -29,6 +29,14 @@ function themeConfig($form) {
     
     $form->addInput($sidebar);
 
+    $next_comments = new Typecho_Widget_Helper_Form_Element_Radio('next_comments', 
+    array(_t('自带评论'),
+          _t('多说评论')
+        ),
+    1, _t('评论模块'));
+
+    $form->addInput($next_comments);
+
     $search_form = new Typecho_Widget_Helper_Form_Element_Checkbox('search_form', 
     array('Motion' => _t('启用动画效果'),
         'ShowSearch' => _t('显示搜索框'),
