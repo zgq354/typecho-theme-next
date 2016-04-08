@@ -39,11 +39,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
        </span>
        <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <?php if($this->options->next_comments): ?>
+                <?php if(!empty($this->options->next_comments)): ?>
                	<a rel="nofollow" href="<?php $this->permalink() ?>#comments"><span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>" data-count-type="comments"></span></a>
                 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
         				<script type="text/javascript">
-        				var duoshuoQuery = {short_name:"cizel1"};
+        				var duoshuoQuery = {short_name:<?php echo '"'.$this->options->next_comments.'"'; ?>};
         					(function() {
         						var ds = document.createElement('script');
         						ds.type = 'text/javascript';ds.async = true;
