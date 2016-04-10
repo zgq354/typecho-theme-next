@@ -29,6 +29,10 @@ function themeConfig($form) {
     
     $form->addInput($sidebar);
 
+    $next_comments =  new Typecho_Widget_Helper_Form_Element_Text('next_comments', NULL, '', _t('多说评论'), _t('填写多说评论的short_name,如果使用官方评论则不填'));
+
+    $form->addInput($next_comments);
+
     $search_form = new Typecho_Widget_Helper_Form_Element_Checkbox('search_form', 
     array('Motion' => _t('启用动画效果'),
         'ShowSearch' => _t('显示搜索框'),
