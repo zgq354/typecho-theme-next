@@ -37,7 +37,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
        </span>
        <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a rel="nofollow" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('暂无评论', '1 条评论', '%d 条评论'); ?></a>
+              <?php if(!empty($this->options->next_comments)): ?>
+              <a rel="nofollow" href="<?php $this->permalink() ?>#comments"><span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>" data-count-type="comments"></span></a>
+              <?php else: ?>
+              <a rel="nofollow" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('暂无评论', '1 条评论', '%d 条评论'); ?></a>
+              <?php endif; ?>
        </span>
       </div>
     </header>

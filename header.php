@@ -2,7 +2,7 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 //当cdn加速开启时候定义cdn的地址
 if (!empty($this->options->next_cdn) && $this->options->next_cdn){
-    define('__TYPECHO_THEME_URL__', Typecho_Common::url(__TYPECHO_THEME_DIR__ . '/next', $this->options->next_cdn));
+    define('__TYPECHO_THEME_URL__', Typecho_Common::url(__TYPECHO_THEME_DIR__ . '/' . basename(dirname(__FILE__)) , $this->options->next_cdn));
 }
 ?><!doctype html>
 <html class="theme-next <?php if(!empty($this->options->search_form) && in_array('Motion', $this->options->search_form)) echo "use-motion ";?>theme-next-mist">
