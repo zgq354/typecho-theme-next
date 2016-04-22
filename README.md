@@ -1,10 +1,10 @@
 # typecho-theme-next
-A typecho version of hexo theme next https://github.com/iissnan/hexo-theme-next
 
-## 简介
+简洁大方的 Hexo 主题 [Next.Mist](https://github.com/iissnan/hexo-theme-next) 的typecho移植版。
 
-简洁大方的hexo主题 [Next](https://github.com/iissnan/hexo-theme-next) 的typecho移植版。
-目前仅移植了Mist的Scheme( [预览](http://blog.izgq.net/) )
+[预览](http://blog.izgq.net/)
+
+NexT.Pisces传送门：[NexT.Pisces](https://github.com/newraina/typecho-theme-NexTPisces)
 
 ###在Typecho 1.0版本测试通过
 
