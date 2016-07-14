@@ -177,14 +177,14 @@ if (menu.last){
       continue;
     }
     ii++;
-    h2Node=$('<li class="nav-item nav-level-2"><a class="nav-link" href="#'+(i.replace(/ /g,''))+'"><span class="nav-number">'+(ii).toString()+'.</span> <span class="nav-text">'+i+'</span></a></li>');
+    h2Node=$('<li class="nav-item nav-level-2"><a class="nav-link" href="#'+(i.replace(/ /g,''))+'"><span class="nav-text">'+i+'</span></a></li>');
     if (h2.length){
       jj=0;
       h3List=$('<ol class="nav-child"></ol>');
       for (j in h2){
         jj++;
         h3=h2[j];
-        h3Node=$('<li class="nav-item nav-level-3"><a class="nav-link" href="#'+(h3.replace(/ /g,''))+'"><span class="nav-number">'+(ii).toString()+'.'+(jj).toString()+'</span> <span class="nav-text">'+h3+'</span></a></li>')
+        h3Node=$('<li class="nav-item nav-level-3"><a class="nav-link" href="#'+(h3.replace(/ /g,''))+'"><span class="nav-text">'+h3+'</span></a></li>')
         h3List.append(h3Node);
       }
       if(h3List.text().length){
