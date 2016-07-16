@@ -4,7 +4,7 @@
  * 
  * @package Next.Mist
  * @author zgq354
- * @version 1.2.5
+ * @version 1.2.6
  * @link http://blog.izgq.net/archives/444/
  */
 

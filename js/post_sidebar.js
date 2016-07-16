@@ -194,7 +194,7 @@ if (menu.last){
     h2List.append(h2Node);
   }
   if (h2List.text()){
-    $('.post-toc').html('<div class="post-toc-content">'+h2List[0].outerHTML+'</div>')
+    $('.post-toc').html('<div class="post-toc-content motion-element">'+h2List[0].outerHTML+'</div>')
   }else {
     $('.post-toc').html('');
   }
