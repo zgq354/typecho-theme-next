@@ -1,4 +1,4 @@
-<div id="comments" id="comments"> 
+<div id="comments" class="comments"> 
 <?php if(!empty($this->options->next_comments)): ?>
 	<?php if($this->allow('comment')): ?>
 		<!-- 多说评论框 start -->
