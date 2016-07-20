@@ -186,7 +186,7 @@ th {
 body {
   position: relative;
   font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2;
   color: #555;
   background: #fff;
@@ -214,7 +214,8 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
+  color: #333;
+  font-weight: normal;
   line-height: 1;
   font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -2141,6 +2142,7 @@ ul li {
   position: relative;
   font-size: 26px;
   font-weight: 400;
+  color: #333;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
@@ -2187,7 +2189,6 @@ ul li {
   border: none;
   border-bottom: 2px solid #666;
   transition-property: border;
-mobie()
 }
 @media (min-width: 1600px) {
   .post-more-link a {
@@ -2278,17 +2279,17 @@ mobie()
     border-bottom: none;
 }
 
-.comments{
+#comments{
     font-size: 13px;
 }
 .comment-meta{
     margin-top: -5px;
     margin-bottom: 5px;
 }
-.post-content a, .comment-content a {
+.post-content a,#comments .comment-content a {
     border-bottom:1px solid #ddd;
 }
-.post-meta a:hover, .post-content a:hover, .widget a:hover, .comment-content a {
+.post-meta a:hover, .post-content a:hover, .widget a:hover {
     border-bottom-color:transparent;
 }
 
