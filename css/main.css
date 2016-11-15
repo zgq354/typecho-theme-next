@@ -2567,3 +2567,8 @@ img.alignright {
         margin: 10px 20px;
     }
 }
+
+ol li{
+        list-style-type:disc;
+        list-style-position:inside;
+}
