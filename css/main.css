@@ -477,12 +477,10 @@ code {
 code {
   word-break: break-all;
   background: #eee;
-  text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
 pre code {
   background: none;
-  text-shadow: none;
   padding: 0;
 }
 .highlight pre {
@@ -557,7 +555,6 @@ pre code {
   background: #f7f7f7;
   color: #8e908c;
   font: 13px Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-  text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
   margin-left: 40px;
