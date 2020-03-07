@@ -981,11 +981,11 @@ body {
   margin-left: 10px;
 }
 .sidebar-nav .sidebar-nav-active {
-  color: #87daff;
-  border-bottom-color: #87daff;
+  color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 .sidebar-nav .sidebar-nav-active:hover {
-  color: #87daff;
+  color: #ffffff;
 }
 .sidebar-panel {
   display: none;
@@ -1031,10 +1031,10 @@ body {
   color: #ccc;
 }
 .post-toc .nav .active-current > a {
-  color: #87daff;
+  color: #ffffff;
 }
 .post-toc .nav .active-current > a:hover {
-  color: #87daff;
+  color: #ffffff;
 }
 .post-toc-indicator {
   height: 20px;
@@ -1903,7 +1903,7 @@ body {
   position: absolute;
 }
 .page-post-detail .sidebar-toggle-line {
-  background: #87daff;
+  background: #ffffff;
 }
 /*
 .page-post-detail .comments {
