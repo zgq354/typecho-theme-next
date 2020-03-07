@@ -2415,6 +2415,7 @@ textarea.textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
+    resize : none;
 }
 .col2 p, .col1 p {
     margin:10px 0;
