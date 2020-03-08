@@ -51,7 +51,7 @@ Typecho_Widget::widget('Widget_Stat')->to($stat);
 </div>
 <?php if (class_exists("Links_Plugin")): ?>
   
-<div class="links-of-author motion-element">
+<div class="links-of-author motion-element" style="margin-left: 20px; margin-right: 20px;">
     <p class="" style="margin-bottom: 12px;"><strong>友情链接</strong></p>
     <?php Links_Plugin::output('<span class="links-of-author-item"><a href="{url}" title="{title}" target="_blank">{name}</a></span>'); ?>
 </div>
