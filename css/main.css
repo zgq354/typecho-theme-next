@@ -2297,7 +2297,7 @@ ul li {
     display:inline;
     margin:0 5px;
     padding:3px 5px;
-    border: 1px solid #ddd;
+    border:1px solid #ddd;
 }
 
 .comment-list, .comment-list ol {
@@ -2415,7 +2415,8 @@ textarea.textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
-    resize : none;
+    resize: none;
+    border: solid 1px #D4D4D4;
 }
 .col2 p, .col1 p {
     margin:10px 0;
