@@ -15,7 +15,7 @@ Hexo 主题 [Next.Mist](https://github.com/iissnan/hexo-theme-next) 的 Typecho 
 ## 新版本修改
 
  - [x] 代码格式化
- - [ ] 去掉逝去的多说评论
+ - [x] 去掉逝去的多说评论
  - [ ] css 样式与原主题同步
  - [ ] js 重构，减少冗余代码
 

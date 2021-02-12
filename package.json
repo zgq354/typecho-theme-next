@@ -1,0 +1,20 @@
+{
+  "name": "next-mist",
+  "version": "1.0.0",
+  "description": "Hexo 主题 Next.Mist 的 Typecho 移植版。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgq354/typecho-theme-next.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zgq354/typecho-theme-next/issues"
+  },
+  "homepage": "https://github.com/zgq354/typecho-theme-next#readme"
+}
