@@ -4,7 +4,7 @@
   "description": "Hexo 主题 Next.Mist 的 Typecho 移植版。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/zgq354/typecho-theme-next/issues"
   },
-  "homepage": "https://github.com/zgq354/typecho-theme-next#readme"
+  "homepage": "https://github.com/zgq354/typecho-theme-next#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-stylus": "^2.7.0",
+    "yaml": "^1.10.0"
+  }
 }
