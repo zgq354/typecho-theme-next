@@ -15,9 +15,11 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <!-- 使用url函数转换相关路径 -->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" />
-  <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5'); ?>" />
-  <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0'); ?>" />
-  <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/css/main.css?v=1.2.1'); ?>" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/dist/css/main.css?v=1'); ?>" />
+  <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/dist/css/typecho.css?v=1'); ?>" />
+  <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/dist/css/custom.css?v=1'); ?>" />
   <script type="text/javascript" id="hexo.configuration">
     var CONFIG = {
       scheme: 'Mist',
@@ -52,11 +54,33 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
 
   <!-- 通过自有函数输出HTML头部信息 -->
   <?php $this->header(); ?>
+  <!-- <noscript> -->
+    <style>
+      .use-motion .brand,
+      .use-motion .menu-item,
+      .sidebar-inner,
+      .use-motion .post-block,
+      .use-motion .pagination,
+      .use-motion .comments,
+      .use-motion .post-header,
+      .use-motion .post-body,
+      .use-motion .collection-header { opacity: initial; }
+
+      .use-motion .site-title,
+      .use-motion .site-subtitle {
+        opacity: initial;
+        top: initial;
+      }
+
+      .use-motion .logo-line-before i { left: initial; }
+      .use-motion .logo-line-after i { right: initial; }
+    </style>
+  <!-- </noscript> -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <div class="container one-column <?php if ($this->is('index')) echo 'page-home';
+  <div class="container use-motion <?php if ($this->is('index')) echo 'page-home';
                                     elseif ($this->is('post')) echo "page-post-detail";
                                     elseif ($this->is('page', 'archive') || $this->is('archive')) echo "page-archive"; ?>">
     <!--page home-->
@@ -64,48 +88,56 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">
-        <h1 class="site-meta">
-          <span class="logo-line-before"><i></i></span>
-          <a href="<?php $this->options->siteUrl(); ?>" class="brand" rel="start">
-            <span class="logo">
-              <i class="icon-next-logo"></i>
-            </span>
-            <span class="site-title"><?php $this->options->title() ?></span>
-          </a>
-          <span class="logo-line-after"><i></i></span>
-        </h1>
-
-        <div class="site-nav-toggle">
-          <button>
-            <span class="btn-bar"></span>
-            <span class="btn-bar"></span>
-            <span class="btn-bar"></span>
-          </button>
+        <div class="site-brand-container">
+          <div class="site-nav-toggle">
+            <div class="toggle" aria-label="Toggle navigation bar">
+              <span class="toggle-line toggle-line-first"></span>
+              <span class="toggle-line toggle-line-middle"></span>
+              <span class="toggle-line toggle-line-last"></span>
+            </div>
+          </div>
+          <div class="site-meta">
+            <a href="<?php $this->options->siteUrl(); ?>" class="brand" rel="start">
+              <span class="logo-line-before"><i></i></span>
+              <span class="logo">
+                <i class="icon-next-logo"></i>
+              </span>
+              <h1 class="site-title"><?php $this->options->title() ?></h1>
+              <span class="logo-line-after"><i></i></span>
+            </a>
+          </div>
+          <div class="site-nav-right">
+            <div class="toggle popup-trigger"></div>
+          </div>
         </div>
-
-        <nav class="site-nav"><?php $displaysearch = !empty($this->options->search_form) && in_array('ShowSearch', $this->options->search_form) ?>
+        <!-- TODO: 移除测试用 site-nav-on -->
+        <!-- <nav class="site-nav site-nav-on"> -->
+        <nav class="site-nav">
+          <?php $displaysearch = !empty($this->options->search_form) && in_array('ShowSearch', $this->options->search_form) ?>
           <ul id="menu" class="menu <?php if ($displaysearch) echo 'menu-left'; ?>">
             <li class="menu-item menu-item-home">
               <a href="<?php $this->options->siteUrl(); ?>" rel="section">
-                <i class="menu-item-icon"></i> <br />
+                <!-- TODO: home icon -->
+                <!-- <i class="fa fa-home fa-fw"></i> -->
                 首页
               </a>
             </li>
             <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
             <?php while ($pages->next()) : ?>
-              <li class="menu-item menu-item-home">
-                <a href="<?php $pages->permalink(); ?>" rel="section"><?php $pages->title(); ?></a>
+              <!-- TODO: menu-item-xxx 和 icon -->
+              <li class="menu-item">
+                <a href="<?php $pages->permalink(); ?>" rel="section">
+                  <?php $pages->title(); ?>
+                </a>
               </li>
             <?php endwhile; ?>
           </ul>
 
           <?php if ($displaysearch) : ?>
             <div class="site-search">
-
               <form class="site-search-form">
                 <input type="text" id="st-search-input" name="s" class="st-search-input st-default-search-input" autocomplete="off" autocorrect="off" autocapitalize="off" value="<?php if ($this->is('search')) echo $this->getKeywords(); ?>" />
               </form>
-
             </div>
           <?php endif; ?>
         </nav>

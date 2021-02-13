@@ -44,7 +44,8 @@ function defineConfig(style) {
   });
 }
 
-function css() {
+// 处理 Hexo 移植过来的部分
+function baseCss() {
   return gulp
     .src("./src/css/main.styl")
     .pipe(stylus({
@@ -54,4 +55,12 @@ function css() {
     .pipe(gulp.dest("./dist/css"));
 }
 
-exports.default = css;
+// 为 Typecho 定制的样式
+function typechoCss() {
+  return gulp
+    .src("./src/css/typecho.styl")
+    .pipe(stylus())
+    .pipe(gulp.dest("./dist/css"));
+}
+
+exports.default = gulp.parallel([baseCss, typechoCss]);
