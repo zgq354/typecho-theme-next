@@ -16,7 +16,7 @@ Hexo 主题 [Next](https://github.com/theme-next/hexo-theme-next) 的 Typecho �
  - [x] 代码格式化
  - [x] 去掉逝去的多说评论
  - [x] 引入 next 的 stylus 样式，gulp 构建
- - [ ] 基础 css 样式、HTML 重构
+ - [ ] 基础 css 样式、HTML 重构(doing)
  - [ ] 新评论框适配
  - [ ] 基础 js 适配
  - [ ] 完善各子页面配置
