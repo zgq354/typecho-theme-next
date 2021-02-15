@@ -86,7 +86,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
     <!--page home-->
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">
         <div class="site-brand-container">
           <div class="site-nav-toggle">
