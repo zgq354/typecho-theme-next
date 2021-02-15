@@ -20,7 +20,21 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
   <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/dist/css/main.css?v=1'); ?>" />
   <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/dist/css/typecho.css?v=1'); ?>" />
   <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/custom.css?v=1'); ?>" />
-  <script type="text/javascript" id="hexo.configuration">
+  <script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    // TODO: 完善配置
+    var CONFIG = {"hostname":"","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+  <script id="page-configurations">
+    // https://hexo.io/docs/variables.html
+    CONFIG.page = {
+      sidebar: "",
+      isHome : true,
+      isPost : false,
+      lang   : 'zh'
+    };
+  </script>
+  <!-- <script type="text/javascript" id="hexo.configuration">
     var CONFIG = {
       scheme: 'Mist',
       motion: <?php if (!empty($this->options->search_form) && in_array('Motion', $this->options->search_form))
@@ -44,7 +58,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
                 } ?>
 
     };
-  </script>
+  </script> -->
   <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -54,7 +68,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
 
   <!-- 通过自有函数输出HTML头部信息 -->
   <?php $this->header(); ?>
-  <!-- <noscript> -->
+  <noscript>
     <style>
       .use-motion .brand,
       .use-motion .menu-item,
@@ -75,7 +89,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
       .use-motion .logo-line-before i { left: initial; }
       .use-motion .logo-line-after i { right: initial; }
     </style>
-  <!-- </noscript> -->
+  </noscript>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,3 +157,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
         </nav>
       </div>
     </header>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span>0%</span>
+    </div>
