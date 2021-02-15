@@ -19,7 +19,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/dist/css/main.css?v=1'); ?>" />
   <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/dist/css/typecho.css?v=1'); ?>" />
-  <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/dist/css/custom.css?v=1'); ?>" />
+  <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('/custom.css?v=1'); ?>" />
   <script type="text/javascript" id="hexo.configuration">
     var CONFIG = {
       scheme: 'Mist',

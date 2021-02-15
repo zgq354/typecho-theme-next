@@ -59,7 +59,10 @@ function baseCss() {
 function typechoCss() {
   return gulp
     .src("./src/css/typecho.styl")
-    .pipe(stylus())
+    .pipe(stylus({
+      use: defineConfig,
+      'include css': true,
+    }))
     .pipe(gulp.dest("./dist/css"));
 }
 

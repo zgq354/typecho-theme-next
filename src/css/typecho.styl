@@ -1,7 +1,19 @@
 
+$scheme    = hexo-config('scheme') ? hexo-config('scheme') : 'Muse';
+
+$variables = base $scheme;
+
+// Variables Layer
+// --------------------------------------------------
+for $variable in $variables
+  @import "_variables/" + $variable;
+
 // Mixins Layer
 // --------------------------------------------------
 @import "_mixins.styl";
+
+// 兼容分页样式
+@import "_typecho/pagination.styl";
 
 .header-inner {
   +tablet-desktop() {
