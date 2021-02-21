@@ -66,8 +66,38 @@ function getTagCount()
 
 function themeInit($archive)
 {
-    //归档列表全部输出
+    // 归档列表全部输出
     if ($archive->is('archive') && !$archive->is('search')) {
         $archive->parameter->pageSize = 10000; // 自定义条数
     }
+}
+
+/**
+ * 自定义输出文章内容函数，原来的格式不够灵活
+ * 原函数位于 Widget_Abstract_Contents 的 content() 方法
+ * @param mixed $that 当前文章的 this 对象
+ * @param mixed $more 文章截取后缀
+ */
+function customContent($that, $more = false)
+{
+    echo false !== $more && false !== strpos($that->text, '<!--more-->') ?
+    $that->excerpt . "<div class=\"post-button\"><a class=\"btn\" href=\"{$that->permalink}#more\" title=\"{$that->title}\">{$more}</a></div>" : $that->content;
+}
+
+/**
+ * 根据页面 slug，获取顶部 fa 图标的类名
+ * @param string $slug 页面缩略名
+ */
+function getNavIconFAClass($slug)
+{
+    $map = [
+        'home' => 'home',
+        'categories' => 'th',
+        'archive' => 'archive',
+        'tag' => 'tags',
+        'board' => 'comments',
+        'links' => 'globe-asia',
+        'about-me' => 'user',
+    ];
+    return empty($map[$slug]) ? 'fa-globe-asia' : "fa-$map[$slug]";
 }

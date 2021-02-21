@@ -131,16 +131,15 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn) {
           <ul id="menu" class="menu <?php if ($displaysearch) echo 'menu-left'; ?>">
             <li class="menu-item menu-item-home">
               <a href="<?php $this->options->siteUrl(); ?>" rel="section">
-                <!-- TODO: home icon -->
-                <!-- <i class="fa fa-home fa-fw"></i> -->
+                <i class="fa fa-home fa-fw"></i>
                 首页
               </a>
             </li>
             <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
             <?php while ($pages->next()) : ?>
-              <!-- TODO: menu-item-xxx 和 icon -->
-              <li class="menu-item">
+              <li class="menu-item menu-item-<?php $pages->slug(); ?>">
                 <a href="<?php $pages->permalink(); ?>" rel="section">
+                  <i class="fa <?php echo getNavIconFAClass($pages->slug); ?> fa-fw"></i>
                   <?php $pages->title(); ?>
                 </a>
               </li>

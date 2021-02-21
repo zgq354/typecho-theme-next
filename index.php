@@ -54,7 +54,7 @@ $this->need('header.php');
             </header>
             <div class="post-body">
               <!-- TODO: 阅读全文按钮、与按上次位置跳转的完善，搞完 bookmark 功能再跟进 -->
-              <?php $this->content('阅读全文 »'); ?>
+              <?php customContent($this, '阅读全文 »'); ?>
             </div>
             <footer class="post-footer">
               <div class="post-eof"></div>
@@ -65,7 +65,6 @@ $this->need('header.php');
       </div>
     </div>
   </div>
-
   <?php $this->need('sidebar.php'); ?>
 </main>
 <?php $this->need('footer.php'); ?>
