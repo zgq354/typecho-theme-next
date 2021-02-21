@@ -85,6 +85,15 @@ function customContent($that, $more = false)
 }
 
 /**
+ * 输出带 more 锚点的文章/页面内容
+ * @param mixed $that 当前文章/页面的 this 对象
+ */
+function customPostContent($that)
+{
+    echo str_replace('<!--more-->', '<a id="more"></a>', $that->content);
+}
+
+/**
  * 根据页面 slug，获取顶部 fa 图标的类名
  * @param string $slug 页面缩略名
  */

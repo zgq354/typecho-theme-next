@@ -32,7 +32,7 @@
                     </header>
                     <div class="post-body">
                         <span itemprop="articleBody">
-                            <?php $this->content(); ?>
+                            <?php customPostContent($this); ?>
                         </span>
                     </div>
                     <footer class="post-footer">
